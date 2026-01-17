@@ -1,0 +1,145 @@
+/* Outer background */
+.outer-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+  padding: 30px;
+  transition: background 0.3s ease;
+}
+
+.outer-bg.dark {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+}
+
+/* Outer framed rectangle */
+.border-box {
+  padding: 18px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.outer-bg.dark .border-box {
+  background: linear-gradient(145deg, #2a2a2a, #1c1c1c);
+}
+
+/* Inner business card */
+.inner-card {
+  display: flex;
+  gap: 20px;
+  width: 380px;
+  border-radius: 18px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.outer-bg.dark .inner-card {
+  background: #1f1f1f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Left section (image slider) */
+.card-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-left:hover .profile-pic {
+  transform: scale(1.05);
+}
+
+/* Right section */
+.card-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Heading */
+.name {
+  margin-bottom: 12px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+.outer-bg.dark .name {
+  color: #f1f1f1;
+}
+
+/* Contact rows */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.outer-bg.dark .contact-row {
+  color: #ddd;
+}
+
+/* Icon alignment */
+.icon {
+  width: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Email link */
+.email-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+/* Dark mode button */
+.dark-btn {
+  margin-top: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  background: #333;
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.dark-btn:hover {
+  background: #000;
+  transform: scale(1.05);
+}
+
+.outer-bg.dark .dark-btn {
+  background: #eee;
+  color: #111;
+}
+
+.outer-bg.dark .dark-btn:hover {
+  background: #fff;
+}
